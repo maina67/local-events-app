@@ -7,7 +7,7 @@ export default function Home() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch("https://local-events-app.onrender.com")
+    fetch("https://local-events-app.onrender.com/api/events")
       .then((res) => res.json())
       .then((data) => setEvents(data))
       .catch((err) => console.error("Error fetching events:", err));
